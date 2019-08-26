@@ -6,19 +6,25 @@
  */
 
 public class Practice01MathIterative implements Practice01Math {
+    /**
+     * This function is a iterative way to get Fibonacci of number n.
+     */
     public int fib(int n) {
-        int privousPrivousNum, privousNum = 0;
+        int previousPreviousNum, previousNum = 0;
         int fib = 1;
         if (n <= 1)
             return n;
         for(int i = 1; i < n; i++) {
-            privousPrivousNum = privousNum;
-            privousNum = fib;
-            fib = privousNum + privousPrivousNum;
+            previousPreviousNum = previousNum;
+            previousNum = fib;
+            fib = previousNum + previousPreviousNum;
         }
         return fib;
     }
 
+    /**
+     * This function is a iterative way to get factorial of number n.
+     */
     public int fact(int n) {
         int fact =1;
         if (n < 0)
